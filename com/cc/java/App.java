@@ -1,36 +1,37 @@
 package com.cc.java;
 
 public class App {
-
+    
     public static void main(String[] args) {
 
-        /**Typkonvertierung  */
-        App.output(String.valueOf(2)); // int --> String
-        App.output(Integer.toString(2)); // int--> String
-        App.output("Das ist ein Ziffer: " + 2); // int --> String
+        /** Typkonvertierung  */
+        App.output(String.valueOf(2));  // int --> String
+        App.output(Integer.toString(2));  // int --> String
+        App.output("Das ist eine Ziffer: " + 2);  // int --> String
 
-
-        Cat cat = new Cat();
-        output("Blick von aussen " + cat);
-
-        cat.tellYourAddress();
-
-        output("-----------------");
-
-        Cat cat1 = new Cat();
-        output("Blink von aussen " + cat1);
+        output("------------------------");
         
-        cat1.tellYourAddress();
+        // neues Objekt wird erzeugt, Adresse wird cat zugewiesen
+        Cat cat = new Cat();
+        // Methode output befindet sich in der KLASSE App
+        App.output("Blick von aussen: "+ cat); 
+        // Methode tellYourAddress() befindet sich im OBJEKT cat 
+        cat.tellYourAddress();
+    
+        output("------------------------");
 
-        App.tellYourAddress();
+        // neues Objekt wird erzeugt, Adresse wird cat1 zugewiesen
+        Cat cat1 = new Cat();
+        // Methode output befindet sich in der KLASSE App
+        output("Blick von aussen: "+ cat1); 
+        // Methode tellYourAddress() befindet sich im OBJEKT cat1 
+        cat1.tellYourAddress();
 
     }
 
+    // Methode witrd aus der KLASSE aufgerufen, daher static
     public static void output(String outputStr) {
         System.out.println(outputStr);
     }
 
-    public static void tellYourAddress() {
-        System.out.println("Hallo!");
-    }
 }
