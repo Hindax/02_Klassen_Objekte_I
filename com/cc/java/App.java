@@ -4,27 +4,38 @@ public class App {
     
     public static void main(String[] args) {
 
-        Cat cat = new Cat();
-        cat.name = "Grizabella";
-        cat.furColor = "white";
-        cat.age = 29;
+        Cat cat = new Cat("Grizabella", "white", 29);
+        // cat.name = "Grizabella";
+        // cat.furColor = "white";
+        // cat.age = 29;
+
+        Cat cat1 = new Cat("Leila","rot",  0);
 
         // output(cat.name);
         // output(cat.furColor);
         // output(String.valueOf(cat.age));
 
-        App.output(cat.tellYourName());
+        output(cat.tellYourName());
         output(cat.tellYourFurColor());
         output(String.valueOf(cat.tellYourAge()));
+
+        output(cat1.tellYourName());
+        output(cat1.tellYourFurColor());
+        output(String.valueOf(cat1.tellYourAge()));
+     
 
         // cat.tellYourAddress();
 
         output("------------------------");
 
-        Cat cat1 = new Cat();
-        cat1.name = "Alonzo";
-        cat1.furColor = "grey";
-        cat1.age = 18;
+        // Cat cat1 = new Cat("Alonzo, "grey", 18);
+        // cat1.name = "Alonzo";
+        // cat1.furColor = "grey";
+        // cat1.age = 18;
+
+        // output(cat.tellYourName());
+        // output(cat.tellYourFurColor());
+        // output(String.valueOf(cat.tellYourAge()));
         
         // neues Objekt wird erzeugt, Adresse wird cat zugewiesen
         // Cat cat = new Cat();
